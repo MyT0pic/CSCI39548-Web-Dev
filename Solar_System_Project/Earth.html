@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Earth </title>
+        <style>
+            #header
+            {
+                background-color: lightblue;
+                color: green;
+                padding: 16px;
+                text-align: center;
+                border: solid 4px blue;
+                font-size: 32px;
+                background-image: url("Earth1.png");
+            }
+            #body1
+            {
+                background-color: lightblue;
+                color: green;
+                padding: 16px;
+                text-align: center;
+                justify-content: center;
+                border: solid 4px blue;
+                font-size: 20px;
+                display: flex;
+                gap: 25px;
+            }
+            #body2
+            {
+                background-color: lightblue;
+                color: green;
+                padding: 16px;
+                text-align: center;
+                justify-content: center;
+                border: solid 4px blue;
+                font-size: 20px;
+                display: grid;
+                gap: 25px;
+            }
+            .image-container 
+            {
+                width: 350px;
+                height: 300px;
+                border: 1px solid black;
+                margin-bottom: 25px;
+            }
+            .image-container img 
+            {
+                width: 100%;
+                height: 100%;
+                object-fit: fill;
+            }
+        </style>
+    </head>
+    <body>
+        <div id = "header"> 
+            <h1>Welcome to Earth</h1>
+        </div>
+
+        <div id = "body1">
+            <a href="Solar_System.html"> Visit the Solar System </a>
+            <a href="Sun.html"> Visit Sun </a>
+            <a href="Mercury.html"> Visit Mercury </a>
+            <a href="Venus.html"> Visit Venus </a>
+            <a href="Earth.html"> Visit Earth </a>
+            <a href="Moon(Earth).html"> Visit Moon (Earth)</a>
+            <a href="Mars.html"> Visit Mars </a>  
+            <a href="Jupiter.html"> Visit Jupiter </a>
+            <a href="Saturn.html"> Visit Saturn </a>
+            <a href="Uranus.html"> Visit Uranus </a>
+            <a href="Neptune.html"> Visit Neptune </a>
+        </div>
+
+        <div id = "body2">
+            <f0> Fun Facts: </f0>
+            <f1> Fact 1: Land is about 29% of Earth's surface area, while the rest, ~71%, are water. </f1>
+            <f2> Fact 2: Humans have already explored about 5% of Earth's ocean. </f2>
+            <f3> Fact 3: Earth is also alternatively called Blue Planet or Terra. </f3>
+            <f4> Fact 4: Earth is the only planet whose name doesn't come from Greek or Roman mythology. </f4>
+            <f5> Fact 5: Earth's axis is tilted about 23.4-23.5°. </f5>
+        </div>
+
+        <div id = "body2">
+            <p> Here's an image of a city road on Earth's surface: </p>
+            <div class = "image-container">
+                <img src = "City_Road.png">
+            </div>
+
+            <button onclick = "playMusic()"> Click to play an audio from Earth! </button>
+        </div>
+
+        <script>
+            function playMusic()
+            {
+                let roadnoise = new Audio("Earth_City_Noise.mp3");
+                roadnoise.play();
+            }
+        </script>
+
+        
+
+    </body>
+</html>
+
+<!-- Every page needs: -->
+<!-- Navigation to all 10 pages -->
+<!-- 2 images with alt text -->
+<!-- 1 unique JS interaction -->
+<!-- Unique matching themes -->
+<!-- Header title + at least 5 fun facts -->

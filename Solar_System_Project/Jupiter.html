@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Jupiter </title>
+        <style>
+            #header
+            {
+                background-color: beige;
+                color: orangered;
+                padding: 16px;
+                text-align: center;
+                border: solid 4px orange;
+                font-size: 32px;
+                background-image: url("jupiter.png");
+            }
+            #body1
+            {
+                background-color: beige;
+                color: orangered;
+                padding: 16px;
+                text-align: center;
+                justify-content: center;
+                border: solid 4px orange;
+                font-size: 20px;
+                display: flex;
+                gap: 25px;
+            }
+            #body2
+            {
+                background-color: beige;
+                color: orangered;
+                padding: 16px;
+                text-align: center;
+                justify-content: center;
+                border: solid 4px orange;
+                font-size: 20px;
+                display: grid;
+                gap: 25px;
+            }
+            .image-container 
+            {
+                width: 350px;
+                height: 300px;
+                border: 1px solid black;
+                margin-bottom: 25px;
+            }
+            .image-container img 
+            {
+                width: 100%;
+                height: 100%;
+                object-fit: fill;
+            }
+        </style>
+    </head>
+    <body>
+        <div id = "header"> 
+            <h1>Welcome to Jupiter</h1>
+        </div>
+
+        <div id = "body1">
+            <a href="Solar_System.html"> Visit the Solar System </a>
+            <a href="Sun.html"> Visit Sun </a>
+            <a href="Mercury.html"> Visit Mercury </a>
+            <a href="Venus.html"> Visit Venus </a>
+            <a href="Earth.html"> Visit Earth </a>
+            <a href="Moon(Earth).html"> Visit Moon (Earth)</a>
+            <a href="Mars.html"> Visit Mars </a>  
+            <a href="Jupiter.html"> Visit Jupiter </a>
+            <a href="Saturn.html"> Visit Saturn </a>
+            <a href="Uranus.html"> Visit Uranus </a>
+            <a href="Neptune.html"> Visit Neptune </a>
+        </div>
+
+        <div id = "body2">
+            <f0> Fun Facts: </f0>
+            <f1> Fact 1: Jupiter is the biggest planet of the Solar System, with a mean radius of around 69.911 km, a diameter at the equator of about 142.984 km, and at the poles, the diameter is only around 133.708 km. </f1>
+            <f2> Fact 2: Jupiter has a small axial tilt of around 3.13°. </f2>
+            <f3> Fact 3: Jupiter has 3 ring systems though they are fainter and smaller than Saturn's. They are mostly made up of dust and small rocky pieces. </f3>
+            <f4> Fact 4: A distinct feature of Jupiter is its Great Red Spot, a persistent high-pressure region in the atmosphere that produces an anticyclonic storm. </f4>
+            <f5> Fact 5: Jupiter has a gravity of 24.79 m/s². </f5>
+        </div>
+
+        <div id = "body2">
+            <p> Here's a close-up image of Jupiter's red spot: </p>
+
+            <img src = "Jupiter_Red_Spot.png">
+        </div>
+
+        <div id = "body2">
+            
+            <div id = "calculator">
+                <p> Your Weight on Jupiter: </p>
+
+                <input type = "number" id = "earthWeight" placeholder = "Enter your weight">
+
+                <button onclick = "calculatorWeight()"> calculate </button>
+
+                <p id = "result"> <!--result here--> </p>
+
+            </div>
+  
+            <script>
+                function calculatorWeight()
+                {
+                    let earthWeight = document.getElementById("earthWeight").value;
+                    let jupiterWeight = earthWeight * 2.527;
+
+                    document.getElementById("result").innerHTML = "Your weight on Jupiter would be about " + jupiterWeight.toFixed(1) + " pounds.";
+
+                    <!-- toFixed(n) cuts the decimal value to only n decimal point -->
+                }
+            </script>
+        </div>
+    </body>
+</html>

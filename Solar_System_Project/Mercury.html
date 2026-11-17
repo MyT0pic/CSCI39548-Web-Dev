@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Mercury </title>
+        <style>
+            #header
+            {
+                background-color: grey;
+                color: darkgrey;
+                padding: 16px;
+                text-align: center;
+                border: solid 4px silver;
+                font-size: 32px;
+                background-image: url("mercury.png");
+                
+            }
+            #body1
+            {
+                background-color: grey;
+                color: darkgrey;
+                padding: 16px;
+                text-align: center;
+                justify-content: center;
+                border: solid 4px silver;
+                font-size: 20px;
+                display: flex;
+                gap: 25px;
+            }
+            #body2
+            {
+                background-color: grey;
+                color: darkgrey;
+                padding: 16px;
+                text-align: center;
+                justify-content: center;
+                border: solid 4px silver;
+                font-size: 20px;
+                display: grid;
+                gap: 25px;
+            }
+            .image-container 
+            {
+                width: 350px;
+                height: 300px;
+                border: 1px solid black;
+                margin-bottom: 25px;
+            }
+            .image-container img 
+            {
+                width: 100%;
+                height: 100%;
+                object-fit: fill;
+            }
+        </style>
+    </head>
+    <body>
+        <div id = "header"> 
+            <h1>Welcome to Mercury</h1>
+        </div>
+
+        <div id = "body1">
+            <a href="Solar_System.html"> Visit the Solar System </a>
+            <a href="Sun.html"> Visit Sun </a>
+            <a href="Mercury.html"> Visit Mercury </a>
+            <a href="Venus.html"> Visit Venus </a>
+            <a href="Earth.html"> Visit Earth </a>
+            <a href="Moon(Earth).html"> Visit Moon (Earth)</a>
+            <a href="Mars.html"> Visit Mars </a>  
+            <a href="Jupiter.html"> Visit Jupiter </a>
+            <a href="Saturn.html"> Visit Saturn </a>
+            <a href="Uranus.html"> Visit Uranus </a>
+            <a href="Neptune.html"> Visit Neptune </a>
+        </div>
+
+        <div id = "body2">  
+            <p> Click Here for a Random Fun Fact out of 5: </p>
+
+            <button onclick = "showFact()"> Click here for random facts! </button>
+
+            <p id = "fact"> <!--innerHTML goes here--> </p>
+
+            <!-- Scripts are at the end of body -->
+            <script>
+                let facts = [
+                "Fact 1: Mecury revolves around the sun around every 88 Earth days.",
+                "Fact 2: Mecury was named after the Roman messenger god.",
+                "Fact 3: Mecury is most frequently the closest planet to the sun.",
+                "Fact 4: Mecury's axis tilt is the smallest of any planets in the solar system at about (1/30)°.",
+                "Fact 5: Galileo Galilei's first planet to be viewed by a telescope is Mercury."
+                ];
+
+            function showFact()
+            {
+                let random_num = Math.floor(Math.random() * facts.length);
+                document.getElementById("fact").innerHTML = facts[random_num];
+            }
+            </script>
+        </div>
+
+        <div id = "body2">
+            <p> Here's an image captured by NASA of Mercury's terrian: </p>
+
+            <img src = "Mercury_Terrian.png">
+        </div>
+    </body>
+</html>

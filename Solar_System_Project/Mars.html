@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Mars </title>
+        <style>
+            #header
+            {
+                background-color: lightsalmon;
+                color: red;
+                padding: 16px;
+                text-align: center;
+                border: solid 4px lightcoral;
+                font-size: 32px;
+                background-image: url("mars.png");
+            }
+            #body1
+            {
+                background-color: lightsalmon;
+                color: red;
+                padding: 16px;
+                text-align: center;
+                justify-content: center;
+                border: solid 4px lightcoral;
+                font-size: 20px;
+                display: flex;
+                gap: 25px;
+            }
+            #body2
+            {
+                background-color: lightsalmon;
+                color: red;
+                padding: 16px;
+                text-align: center;
+                justify-content: center;
+                border: solid 4px lightcoral;
+                font-size: 20px;
+                display: grid;
+                gap: 25px;
+            }
+            .image-container 
+            {
+                width: 350px;
+                height: 300px;
+                border: 1px solid black;
+                margin-bottom: 25px;
+            }
+            .image-container img 
+            {
+                width: 100%;
+                height: 100%;
+                object-fit: fill;
+            }
+        </style>
+    </head>
+    <body>
+        <div id = "header"> 
+            <h1>Welcome to Mars</h1>
+        </div>
+
+        <div id = "body1">
+            <a href="Solar_System.html"> Visit the Solar System </a>
+            <a href="Sun.html"> Visit Sun </a>
+            <a href="Mercury.html"> Visit Mercury </a>
+            <a href="Venus.html"> Visit Venus </a>
+            <a href="Earth.html"> Visit Earth </a>
+            <a href="Moon(Earth).html"> Visit Moon (Earth)</a>
+            <a href="Mars.html"> Visit Mars </a>  
+            <a href="Jupiter.html"> Visit Jupiter </a>
+            <a href="Saturn.html"> Visit Saturn </a>
+            <a href="Uranus.html"> Visit Uranus </a>
+            <a href="Neptune.html"> Visit Neptune </a>
+        </div>
+
+        <div id = "body2">
+            <f0> Fun Facts: </f0>
+            <f1> Fact 1: The gravity on Mars is about 38% of Earth's gravity. </f1>
+            <f2> Fact 2: One rotation on Mars is completed within 24.6 hours while a whole trip around the Sun, is completed within 669.6 days. </f2>
+            <f3> Fact 3: Mars' axis of rotation is tilted around 25.2°. </f3>
+            <f4> Fact 4: Its atmosphere is mostly composed of carbon dioxide, nitrogen and argon gases. </f4>
+            <f5> Fact 5: Mars' mass is 6.42 x 10^23 kilograms, about 10 times less than Earth's mass. </f5>
+        </div>
+
+        <div id = "body2">
+            <p> Here's NASA's Perseverance rover on Mars: </p>
+
+            <img src = "mars_rover.png">
+        </div>
+
+        <div id = "body2">
+            
+            <div id = "calculator">
+                <p> Your Weight on Mars: </p>
+
+                <input type = "number" id = "earthWeight" placeholder = "Enter your weight">
+
+                <button onclick = "calculatorWeight()"> calculate </button>
+
+                <p id = "result"> <!-- result here --> </p>
+
+            </div>
+  
+            <script>
+                function calculatorWeight()
+                {
+                    let earthWeight = document.getElementById("earthWeight").value;
+                    let marsWeight = earthWeight * 0.379;
+
+                    document.getElementById("result").innerHTML = "Your weight on Mars would be about " + marsWeight.toFixed(1) + " pounds.";
+
+                    <!-- toFixed(n) cuts the decimal value to only n decimal point -->
+                }
+            </script>
+        </div>
+
+    </body>
+</html>
+

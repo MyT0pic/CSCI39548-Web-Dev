@@ -1,0 +1,316 @@
+<!doctype html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title> Solar System </title>    
+    <!--stylistic choice goes here-->
+        <style>
+            #header
+            {
+                background-color: black;
+                color: white;
+                padding: 16px;
+                text-align: center;
+                border: solid 4px grey;
+                font-size: 32px;
+            }
+            #body1
+            {
+                background-color: black;
+                color: white;
+                padding: 16px;
+                text-align: center;
+                justify-content: center;
+                border: solid 4px grey;
+                font-size: 20px;
+                display: flex;
+                gap: 25px;
+            }
+            #body2
+            {
+                background-color: black;
+                color: white;
+                padding: 16px;
+                text-align: center;
+                justify-content: center;
+                border: solid 4px grey;
+                font-size: 20px;
+                display: grid;
+                gap: 25px;
+            }
+
+            #bodyanimation 
+            {
+                background-color: black;
+                margin: 0;
+                overflow: hidden;
+            }
+
+            /* The area containing the whole solar system */
+            .solar-system 
+            {
+                width: 1000px;
+                height: 1000px;
+                position: relative;
+                margin: auto;
+                top: 50px;
+            }
+
+            /* The Sun */
+            .sun 
+            {
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+
+                position: absolute;
+                top: 480px;
+                left: 480px;
+
+                box-shadow: 0 0 30px orange;
+            }
+
+            /* Each orbit is a circle */
+            .orbit 
+            {
+                position: absolute;
+                border: 1px solid gray;
+                border-radius: 50%;
+            }
+
+            /* Mercury's orbit */
+            .mercury-orbit 
+            {
+                width: 140px;
+                height: 140px;
+                top: 450px;
+                left: 450px;
+
+                animation: orbit 4s linear infinite;
+            }
+
+            /* Venus' orbit */
+            .venus-orbit 
+            {
+                width: 220px;
+                height: 220px;
+                top: 400px;
+                left: 400px;
+
+                animation: orbit 7s linear infinite;
+            }
+
+            /* Earth's orbit */
+            .earth-orbit 
+            {
+                width: 300px;
+                height: 300px;
+                top: 350px;
+                left: 350px;
+
+                animation: orbit 10s linear infinite;
+            }
+
+            /* Mars' orbit */
+            .mars-orbit 
+            {
+                width: 380px;
+                height: 380px;
+                top: 300px;
+                left: 300px;
+
+                animation: orbit 15s linear infinite;
+            }
+
+            /* Jupiter's orbit */
+            .jupiter-orbit 
+            {
+                width: 500px;
+                height: 500px;
+                top: 250px;
+                left: 250px;
+
+                animation: orbit 25s linear infinite;
+            }
+
+            /* Saturn's orbit */
+            .saturn-orbit   
+            {
+                width: 620px;
+                height: 620px;
+                top: 200px;
+                left: 200px;
+
+                animation: orbit 35s linear infinite;
+            }
+
+            /* Uranus's orbit */
+            .uranus-orbit
+            {
+                width: 740px;
+                height: 740px;
+                top: 150px;
+                left: 150px;
+
+                animation: orbit 45s linear infinite;
+            }
+
+            /* Neptune's orbit */
+            .neptune-orbit
+            {
+                width: 860px;
+                height: 860px;
+                top: 100px;
+                left: 100px;
+
+                animation: orbit 55s linear infinite;
+            }
+
+            /* The planets */
+            .planet 
+            {
+                position: absolute;
+                border-radius: 50%;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            /* Makes the planets orbit */
+            @keyframes orbit 
+            {
+                from 
+                {
+                    transform: rotate(0deg);
+                }
+
+                to 
+                {
+                    transform: rotate(360deg);
+                }
+            }
+
+            /* Pause all animations */
+            .paused 
+            {
+                animation-play-state: paused !important;
+            }
+
+            button 
+            {
+                background-color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div id = "header">
+            <h1> Welcome to our Solar System </h1>
+        </div>
+
+        <div id = "body1">
+            <a href="Sun.html"> Visit the Sun </a>
+            <a href="Mercury.html"> Visit Mercury </a>
+            <a href="Venus.html"> Visit Venus </a>
+            <a href="Earth.html"> Visit the Earth </a>
+            <a href="Moon(Earth).html"> Visit the Moon (Earth)</a>
+            <a href="Mars.html"> Visit Mars </a>  
+            <a href="Jupiter.html"> Visit Jupiter </a>
+            <a href="Saturn.html"> Visit Saturn </a>
+            <a href="Uranus.html"> Visit Uranus </a>
+            <a href="Neptune.html"> Visit Neptune </a>
+        </div>
+  
+        <div id = "body2">
+            <p> Fun Facts: </p>
+            <p> Fact 1: The solar system is about 4.6 billion years old. </p>
+            <p> Fact 2: There's the Asteriod Belt separting between Mars and other terrestrial planets from Jupiter and other gas giants. </p>
+            <p> Fact 3: There's the Kuiper Belt, filled with various dwarf planets and asteroids, outer around Neptune's orbit. </p>
+            <P> Fact 4: The closest star to our sun is Proxima Centauri from the Alpha Centauri system. </P>
+            <p> Fact 5: The planets of the solar system is separated between the terrestrial planets and the gas giants category. </p>
+                
+
+            
+        </div>
+
+        <div id = "bodyanimation">
+            <div class="solar-system">
+
+                <img class = "sun" src = "sun.png">
+
+                <div class="orbit mercury-orbit">
+                    <img class="planet" src="mercury.png" height="25px">
+                </div>
+
+                <div class="orbit venus-orbit">
+                    <img class="planet" src="venus.png" height="25px">
+                </div>
+
+                <div class="orbit earth-orbit">
+                    <img class="planet" src="Earth1.png" height="25px">
+                </div>
+
+                <div class="orbit mars-orbit">
+                    <img class="planet" src="mars.png" height="25px">
+                </div>
+
+                <div class="orbit jupiter-orbit">
+                    <img class="planet" src="jupiter.png" height="55px">
+                </div>
+
+                <div class="orbit saturn-orbit">
+                    <img class="planet" src="saturn.png" height="55px">
+                </div>
+
+                <div class="orbit uranus-orbit">
+                    <img class="planet" src = "uranus.png" height="55px">
+                </div>
+
+                <div class="orbit neptune-orbit">
+                    <img class="planet" src = "neptune.png" height="55px">
+                </div>
+
+                
+
+            </div>
+
+            <button onclick="toggleAnimate()">Stop Animation</button>
+
+            <script>
+
+                let animationRunning = true; 
+
+                function toggleAnimate() 
+                {
+
+                let orbits = document.querySelectorAll(".orbit"); //array
+                console.log(orbits);
+                let button = document.querySelector("button");
+
+                if (animationRunning) 
+                {
+
+                    for (let i = 0; i < orbits.length; i++) 
+                    {
+                        orbits[i].classList.add("paused");
+                    }
+
+                    button.textContent = "Start Animation";
+                    animationRunning = false;
+                } 
+                else 
+                {
+
+                    for (let i = 0; i < orbits.length; i++) 
+                    {
+                        orbits[i].classList.remove("paused");
+                    }
+
+                    button.textContent = "Stop Animation";
+                    animationRunning = true;
+                }
+                }
+
+            </script>
+        </div>>
+    </body>
+</html>

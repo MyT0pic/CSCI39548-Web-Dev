@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Moon </title>
+        <style>
+            #header
+            {
+                background-color: lightgrey;
+                color: grey;
+                padding: 16px;
+                text-align: center;
+                border: solid 4px grey;
+                font-size: 32px;
+                background-image: url("moon.png");
+            }
+            #body1
+            {
+                background-color: lightgrey;
+                color: grey;
+                padding: 16px;
+                text-align: center;
+                justify-content: center;
+                border: solid 4px grey;
+                font-size: 20px;
+                display: flex;
+                gap: 25px;
+            }
+            #body2
+            {
+                background-color: lightgrey;
+                color: grey;
+                padding: 16px;
+                text-align: center;
+                justify-content: center;
+                border: solid 4px grey;
+                font-size: 20px;
+                display: grid;
+                gap: 25px;
+            }
+            .image-container 
+            {
+                width: 350px;
+                height: 300px;
+                border: 1px solid black;
+                margin-bottom: 25px;
+            }
+            .image-container img 
+            {
+                width: 100%;
+                height: 100%;
+                object-fit: fill;
+            }
+        </style>
+    </head>
+    <body>
+        <div id = "header"> 
+            <h1>Welcome to Moon</h1>
+        </div>
+
+        <div id = "body1">
+            <a href="Solar_System.html"> Visit the Solar System </a>
+            <a href="Sun.html"> Visit Sun </a>
+            <a href="Mercury.html"> Visit Mercury </a>
+            <a href="Venus.html"> Visit Venus </a>
+            <a href="Earth.html"> Visit Earth </a>
+            <a href="Moon(Earth).html"> Visit Moon (Earth)</a>
+            <a href="Mars.html"> Visit Mars </a>  
+            <a href="Jupiter.html"> Visit Jupiter </a>
+            <a href="Saturn.html"> Visit Saturn </a>
+            <a href="Uranus.html"> Visit Uranus </a>
+            <a href="Neptune.html"> Visit Neptune </a>
+        </div>
+
+        <div id = "body2">
+            <f0> Fun Facts: </f0>
+            <f1> Fact 1: The moon's gravitational pull is responsible for Earth's low and high ocean tides. </f1>
+            <f2> Fact 2: The moon's gravitational pull is around 1/6 of Earth's. </f2>
+            <f3> Fact 3: The moon has eight phases: new moon, waxing crescent, first quarter, waxing gibbous, full moon, waning gibbous, third quarter, and waning crescent. </f3>
+            <f4> Fact 4: The dark spots of the moon is called maria, which are composed of solidified volcanic rocks, covering around 16% of the moon's surface. </f4>
+            <f5> Fact 5: The moon is estimated to be around 4.5 billion years old. </f5>
+        </div>
+
+        <div id = "body2">
+            <p> Here's an image of the red/blood moon: </p>
+
+            <div id = "image-container">
+                <img src = "redmoon.png">
+            </div>
+        </div>
+
+        <div id = "body2">
+            
+            <div id = "calculator">
+                <p> Your Weight on the Moon: </p>
+
+                <input type = "number" id = "earthWeight" placeholder = "Enter your weight">
+
+                <button onclick = "calculatorWeight()"> calculate </button>
+
+                <p id = "result"> <!--moonweight here--> </p>
+
+            </div>
+  
+            <script>
+                function calculatorWeight()
+                {
+                    let earthWeight = document.getElementById("earthWeight").value;
+                    let moonWeight = earthWeight * 0.165;
+
+                    document.getElementById("result").innerHTML = "Your weight on the moon would be about " + moonWeight.toFixed(1) + " pounds.";
+
+                    <!-- toFixed(n) cuts the decimal value to only n decimal point -->
+                }
+            </script>
+        </div>
+    </body>
+</html>
